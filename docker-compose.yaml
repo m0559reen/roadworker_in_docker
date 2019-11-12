@@ -1,0 +1,12 @@
+version: '3'
+
+services:
+  roadwork:
+    build: .
+    image: roadwork:1.0
+    env_file:
+      - .env
+    volumes:
+      - .:/home
+      - ~/.aws:/root/.aws
+    working_dir: /home
